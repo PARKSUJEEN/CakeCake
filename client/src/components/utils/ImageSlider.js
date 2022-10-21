@@ -1,16 +1,19 @@
-import React from 'react'
-import { Icon, Col, Card, Row, Carousel } from 'antd';
+import React from "react";
+import { Carousel } from "antd";
 
 function ImageSlider(props) {
-    return (
-        <Carousel autoplay>
-            {props.images.map((image, index)=> (
-                <div key={index}>
-                    <img style={{width:'100%', maxHeight:'280px'}} src={`http://localhost:5000/${image}`} />
-                </div>
-            ))}
-        </Carousel>
-    )
+  return (
+    <Carousel autoplay>
+      {props.images.map((image, index) => (
+        <div key={index}>
+          <img
+            style={{ width: "100%", maxHeight: "280px" }}
+            src={`http://localhost:5000/${image}`}
+          />
+        </div>
+      ))}
+    </Carousel>
+  );
 }
 
-export default ImageSlider
+export default ImageSlider;

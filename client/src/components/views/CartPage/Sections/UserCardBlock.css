@@ -1,15 +1,155 @@
-table {
-    font-family: Arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;        
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&family=Playfair+Display:ital,wght@0,700;1,500&display=swap');
+.renderItem_wrap {
+    
+padding: 20px;
+font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+display: flex;
+
+    
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+
+.renderItem_wrap .renderInfo {
+margin-left: 20px;
+padding-top: 50px;
 }
 
-tr:nth-child(even){
-    background-color: #dddddd;
+
+
+.renderImage img{
+
+    border: 3px solid #f74c25;
+    border-radius:3px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    
 }
+
+.renderInfo >div {
+    margin-bottom: 10px;
+}
+
+
+
+.renderInfo .title{
+    
+    font-size: 25px;
+    margin-left: 10px
+    
+}
+
+.renderInfo .price{
+    font-size: 20px;
+    margin-left: 10px;
+    
+}
+
+.renderInfo .quantity {
+    font-size: 20px;
+    display: flex;
+   
+}
+
+.renderInfo .quantity button {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #f74c25;
+    background-color: #ffffff;
+    color: #f74c25;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.renderInfo .remove button{
+    cursor: pointer;
+    border-radius: 25%;
+    border: 2px solid #f74c25;
+    background-color: #ffffff;
+    color: #f74c25;
+    margin-left: 20px;
+    margin-right: 10px;
+    
+
+}
+
+.renderInfo .remove button:HOVER{
+    cursor: pointer;
+    border-radius: 25%;
+    border: 2px solid #f74c25;
+    background-color: #f74c25;
+    color: #ffffff;
+
+
+}
+
+@media (max-width: 767px) {
+    .renderInfo  button{
+        position: sticky
+    }
+
+    .renderImage img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    .renderInfo >div {
+        margin-bottom: 10px;
+    }
+    
+    
+    
+    .renderInfo .title{
+        
+        font-size: 20px;
+        margin-left: 10px;
+        
+    }
+    
+    .renderInfo .price{
+        font-size: 15px;
+        margin-left: 10px;
+        
+    }
+
+    .renderInfo .quantity{
+        font-size: 12px;
+    
+        text-align : center;
+  
+        
+    }
+    
+    
+    
+    .renderInfo .quantity button {
+
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f74c25;
+        background-color: #ffffff;
+        color: #f74c25;
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    
+    
+    }
+    
+    .renderInfo .remove button{
+      
+        width: 60px;
+        font-size: 10px;
+        border-radius: 25%;
+        border: 2px solid #f74c25;
+        background-color: #ffffff;
+        color: #f74c25;
+        margin-left: 15px;
+    
+    
+    }
+  }

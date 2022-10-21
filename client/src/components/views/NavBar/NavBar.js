@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import LeftMenu from "./Sections/LeftMenu";
 import RightMenu from "./Sections/RightMenu";
-import { Drawer, Button, Icon } from "antd";
+import { Drawer, Button, Icon, UpCircleOutlined } from "antd";
 import "./Sections/Navbar.css";
+import styled from "styled-components";
 
 function NavBar() {
   const [visible, setVisible] = useState(false);
@@ -30,15 +31,10 @@ function NavBar() {
         <div className="menu_right">
           <RightMenu mode="horizontal" />
         </div>
-        <Button
-          className="menu__mobile-button"
-          type="primary"
-          onClick={showDrawer}
-        >
-          <Icon type="align-right" />
-        </Button>
-        <Drawer
-          title="Basic Drawer"
+
+        <div className="menu__mobile-button" onClick={showDrawer}></div>
+        {/* <SideBar> */}
+        <SideBar
           placement="right"
           className="menu_drawer"
           closable={false}
@@ -47,10 +43,21 @@ function NavBar() {
         >
           <LeftMenu mode="inline" />
           <RightMenu mode="inline" />
-        </Drawer>
+        </SideBar>
+        {/* </SideBar> */}
       </div>
     </nav>
   );
 }
+
+const SideBar = styled(Drawer)`
+  color: #f74c25;
+  .ant-drawer-content {
+    background-color: #f74c25;
+  }
+  .ant-drawer-body {
+    background-color: #f74c25;
+  }
+`;
 
 export default NavBar;

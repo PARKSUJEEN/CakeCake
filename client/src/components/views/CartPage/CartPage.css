@@ -1,0 +1,47 @@
+.CartPage{
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.CartPage_wrap h1{
+
+   margin-left: 20px;
+   color: #f74c25;
+   margin-top: 20px;
+
+   
+
+}
+
+.CartPage_wrap{
+    
+    
+}
+
+.totalAmount {
+    
+    font-size: 30px;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    color: #f74c25;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.totalAmount .totalAmount_wrap{
+    padding: 20px;
+}
+
+.totalAmount >div{
+   
+}
+
+
+.totalAmount .paypal{
+
+}

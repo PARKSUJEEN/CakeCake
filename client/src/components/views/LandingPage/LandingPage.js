@@ -8,7 +8,7 @@ import CheckBox from "./Sections/CheckBox";
 import { cakes, price } from "./Sections/Datas";
 import RadioBox from "./Sections/RadioBox";
 import SearchFeature from "./Sections/SearchFeature";
-import "../../App.less";
+import styled from "styled-components";
 
 function LandingPage() {
   const [Products, setProducts] = useState([]);
@@ -49,7 +49,7 @@ function LandingPage() {
 
   const renderCards = Products.map((product, index) => {
     return (
-      <Col lg={6} md={3} xs={24} key={index}>
+      <Col lg={6} md={12} xs={24} key={index}>
         <Card
           cover={
             <a href={`/product/${product._id}`}>
@@ -134,9 +134,9 @@ function LandingPage() {
 
   return (
     <div style={{ width: "75%", margin: "3rem auto" }}>
-      <div style={{ textAlign: "center" }}>
+      {/* <div style={{ textAlign: "center" }}>
         <h2>🍰 C A K E 팝 니 당 🍰</h2>
-      </div>
+      </div> */}
 
       {/* { Filter } */}
 
@@ -165,7 +165,6 @@ function LandingPage() {
             marginRight: "9px",
             marginBottom: "5px",
             minWidth: "20px",
-            border: "1px solid #f74c25;",
           }}
         >
           <SearchFeature refreshFunction={updateSearchTerm} />
@@ -182,11 +181,24 @@ function LandingPage() {
           className="LandingPage_morebtn"
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <button onClick={loadMoreHandler}>더보기</button>
+          <Button onClick={loadMoreHandler}>더보기</Button>
         </div>
       )}
     </div>
   );
 }
 
+const Button = styled.button`
+  border: 1px solid #f74c25;
+  border-radius: 2em;
+  padding: 10px;
+  background-color: #fff;
+  color: #f74c25;
+  width: 70px;
+  cursor: pointer;
+`;
+
+const cardSection = styled(Card)`
+  border: 1px solid red;
+`;
 export default LandingPage;

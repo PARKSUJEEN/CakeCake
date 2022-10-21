@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UserCardBlock.css";
 
 function UserCardBlock(props) {
   const renderCartImage = (images) => {
-    console.log("여기까지 OK");
     if (images.length > 0) {
       let image = images[0];
       return `http://localhost:5000/${image}`;
@@ -13,42 +12,55 @@ function UserCardBlock(props) {
   const renderItems = () =>
     props.products &&
     props.products.map((product) => (
-      <tr key={product._id}>
-        <td>
-          <img
-            style={{ width: "70px" }}
-            alt="product"
-            src={renderCartImage(product.images)}
-          />
-        </td>
-        <td>{product.quantity} EA</td>
-        <td>{product.price} 원</td>
-        <td>
-          <button
-            onClick={() => {
-              alert(`${product.title}를(을) 삭제하시겠습니까?`);
-            }}
-          >
-            Remove
-          </button>
-        </td>
-      </tr>
+      <div key={product._id} className="renderItem_wrap">
+        <div className="renderImage">
+          <img alt="product" src={renderCartImage(product.images)} />
+        </div>
+        {/* <button onClick={downdown}>{test}</button> */}
+        <div className="renderInfo">
+          <div className="title"> {product.title}</div>
+          <div className="price"> {product.price}</div>
+          <div className="quantity">
+            <button
+              onClick={() => {
+                let quantity = product.quantity;
+                if (quantity > 1) {
+                  quantity--;
+                  props.editItem(product._id, quantity);
+                }
+              }}
+            >
+              -
+            </button>
+            {product.quantity}
+            <button
+              onClick={() => {
+                let quantity = product.quantity;
+                quantity++;
+                props.editItem(product._id, quantity);
+              }}
+            >
+              +
+            </button>
+          </div>
+          <div className="remove">
+            <button
+              onClick={() => {
+                if (window.confirm("선택하신 상품을 삭제하시겠습니까?")) {
+                  props.removeItem(product._id);
+                }
+              }}
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
     ));
 
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Product Image</th>
-            <th>Product Quantity</th>
-            <th>Product Price</th>
-            <th>Remove from Cart</th>
-          </tr>
-        </thead>
-
-        <tbody>{renderItems()}</tbody>
-      </table>
+      <div>{renderItems()}</div>
     </div>
   );
 }

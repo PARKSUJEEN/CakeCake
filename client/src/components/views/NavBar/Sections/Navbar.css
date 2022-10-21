@@ -9,14 +9,13 @@
   /* border-bottom: solid 1px #e8e8e8; */
   overflow: auto;
   box-shadow: 0 0 30px #f3f1f1;
-  background-color: white;
+  background-color: #f7f6f2;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
 .menu__logo {
   width: 150px;
   float: left;
-
 
 }
 
@@ -27,26 +26,29 @@
   color: #f74c25;
 }
 
+.menu__logo a:HOVER {
+  font-family: 'Playfair Display', serif;
+}
+
 .menu__container .ant-menu-item {
   padding: 0px 5px;
-
+  
 
 }
 
 .menu__container .ant-menu-submenu-title {
   padding: 10px 20px;
   color: #f74c25;
-  
 }
 
-.menu__container .ant-menu-submenu-title:HOVER {
-  /* padding: 10px 20px;
-  color: #f74c25; */
+/* .menu__container .ant-menu-submenu-title:HOVER {
+
+  color: #f74c25;
   font-family: 'Playfair Display', serif;
 
   border-bottom: 1px solid #f74c25;
   
-}
+} */
 
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
@@ -74,25 +76,38 @@
 
 .menu__mobile-button {
   border: none;
+  cursor: pointer;
   float: right;
-  height: 32px;
+ 
   padding: 6px;
   margin-top: 8px;
-  display: none !important; /* use of important to overwrite ant-btn */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   background: #f74c25;
+  display: none !important; /* use of important to overwrite ant-btn */
+
 }
 .menu__mobile-button:HOVER{
  
-  background: #f74c25;
+  background: #ffffff;
+  border:3px solid #f74c25;
+
 }
+
 
 .menu_drawer .ant-drawer-body {
   padding: 0 !important;
+  
 }
+
+
+
 
 /* align header of Drawer with header of page */
 .menu_drawer .ant-drawer-header {
   padding: 14px 24px !important;
+
 }
 
 @media (max-width: 767px) {
@@ -117,5 +132,9 @@
   .menu__logo a {
     padding: 10px 20px;
 
+  }
+
+  .shopping-cart a{
+    font-size: 10px;
   }
 }

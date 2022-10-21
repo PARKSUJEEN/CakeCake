@@ -40,8 +40,16 @@ function CheckBox(props) {
 
   return (
     <div>
-      <Collapse defaultActiveKey={["0"]}>
-        <Panel header="C A K E 종 류" key="1">
+      <Collapse
+        defaultActiveKey={["0"]}
+        style={{
+          border: "2px solid #f74c25",
+          backgroundColor: "#f7f6f2",
+          color: "#f74c25",
+          fontSize: "20px",
+        }}
+      >
+        <Panel header="MENU" key="1">
           {renderCheckboxLists()}
         </Panel>
       </Collapse>

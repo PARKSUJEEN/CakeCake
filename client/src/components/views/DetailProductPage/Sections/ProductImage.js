@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ImageGallery from "react-image-gallery";
+import "../DetailProductPage.css";
 
 function ProductImage(props) {
   const [Images, setImages] = useState([]);
@@ -20,7 +21,7 @@ function ProductImage(props) {
   }, [props.detail]);
 
   return (
-    <div>
+    <div className="ProductImage">
       <ImageGallery items={Images} />
     </div>
   );
