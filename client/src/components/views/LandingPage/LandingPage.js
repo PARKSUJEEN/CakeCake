@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 import axios from "axios";
 import { Icon, Col, Card, Row, Carousel } from "antd";
@@ -9,9 +9,23 @@ import { cakes, price } from "./Sections/Datas";
 import RadioBox from "./Sections/RadioBox";
 import SearchFeature from "./Sections/SearchFeature";
 import styled from "styled-components";
+import Slider from "react-slick";
+import Fade from "react-reveal/Fade";
+import "./LandingPage.css";
+import RenderBest from "./Sections/RenderBest";
+import RenderNew from "./Sections/RenderNew";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 function LandingPage() {
   const [Products, setProducts] = useState([]);
+  const [AllProducts, setAllProducts] = useState([]);
   const [Skip, setSkip] = useState(0);
   const [Limit, setLimit] = useState(8); // 페이지에 보이는 상품 수
   const [PostSize, setPostSize] = useState(0); // 더보기 버튼 8개 이상일때만 보이기!
@@ -21,6 +35,7 @@ function LandingPage() {
   });
 
   const [SearchTerm, setSearchTerm] = useState("");
+  const [Toggle, setToggle] = useState(false);
 
   useEffect(() => {
     let body = {
@@ -29,10 +44,13 @@ function LandingPage() {
     };
 
     getProducts(body);
+    getAllproducts();
   }, []);
 
   const getProducts = (body) => {
     axios.post("/api/product/products", body).then((response) => {
+      console.log(response.data);
+
       if (response.data.success) {
         if (body.loadMore) {
           setProducts([...Products, ...response.data.productInfo]);
@@ -47,17 +65,35 @@ function LandingPage() {
     });
   };
 
+  const getAllproducts = () => {
+    axios.post("/api/product/allproducts").then((response) => {
+      console.log("getAllProducts", response.data);
+
+      if (response.data.success) {
+        setAllProducts(response.data.productInfo);
+      } else {
+        alert("전체상품을 가져오는데 실패 했습니다.");
+      }
+    });
+  };
+
   const renderCards = Products.map((product, index) => {
     return (
-      <Col lg={6} md={12} xs={24} key={index}>
+      <Col lg={6} md={8} xs={24} key={index}>
         <Card
           cover={
             <a href={`/product/${product._id}`}>
               <ImageSlider images={product.images} />
             </a>
           }
+          // cover={
+          //   <img
+          //     syle={{ width: "100%", maxHeight: "150px" }}
+          //     src={`http://localhost:5000/${product.images[0]}`}
+          //   />
+          // }
         >
-          <Meta title={product.title} description={`${product.price}원`} />
+          <Meta title={product.title} description={`$${product.price}`} />
         </Card>
       </Col>
     );
@@ -134,11 +170,69 @@ function LandingPage() {
 
   return (
     <div style={{ width: "75%", margin: "3rem auto" }}>
-      {/* <div style={{ textAlign: "center" }}>
-        <h2>🍰 C A K E 팝 니 당 🍰</h2>
+      <div style={{ textAlign: "center" }}>
+        <img src="" />
+      </div>
+      {/* 
+      <div>
+        <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+            <img
+              style={{ minWidth: "500px", width: "300px", height: "500px" }}
+              src="img/1657868791094_cake4.jpg"
+            />
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+        </Slider>
       </div> */}
-
       {/* { Filter } */}
+      <div className="itemSection">
+        <div className="itemSection_wrap">
+          <div>Staples</div>
+
+          <div
+            onClick={() => {
+              setToggle(false);
+              console.log("landingpage에서 newCakes클릭");
+            }}
+          >
+            New Cakes
+          </div>
+          <div
+            onClick={() => {
+              setToggle(true);
+            }}
+          >
+            Bestsellers
+          </div>
+        </div>
+        <div className="LandingPage_render">
+          {Toggle ? (
+            <>
+              <RenderBest product={AllProducts} />
+            </>
+          ) : (
+            <>
+              <RenderNew product={AllProducts} />
+            </>
+          )}
+        </div>
+      </div>
 
       <Row gutter={[16, 16]}>
         <Col lg={12} xs={24}>
@@ -189,16 +283,13 @@ function LandingPage() {
 }
 
 const Button = styled.button`
-  border: 1px solid #f74c25;
+  border: 2px solid #000000;
   border-radius: 2em;
   padding: 10px;
-  background-color: #fff;
-  color: #f74c25;
+  background-color: #f7f6f2;
+  color: #000000;
   width: 70px;
   cursor: pointer;
 `;
 
-const cardSection = styled(Card)`
-  border: 1px solid red;
-`;
 export default LandingPage;

@@ -43,9 +43,9 @@ function CheckBox(props) {
       <Collapse
         defaultActiveKey={["0"]}
         style={{
-          border: "2px solid #f74c25",
+          border: "2px solid #000000",
           backgroundColor: "#f7f6f2",
-          color: "#f74c25",
+          color: "#000000",
           fontSize: "20px",
         }}
       >

@@ -1,0 +1,116 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&family=Playfair+Display:ital,wght@0,700;1,500&display=swap');
+
+/* LandingPage */
+
+.itemSection {
+    
+}
+
+.itemSection_wrap {
+    display: flex;
+    justify-content: center;
+
+}
+
+.itemSection_wrap >div {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 50px;
+    white-space: nowrap;
+
+}
+
+.LandingPage_render {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* RenderBest, RenderNew */
+.Render {
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+.Render_wrap {
+    
+    
+
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    
+    
+}
+.Render_wrap >div{
+    
+    border: 1px solid orange;
+    width: 100%;
+   
+    
+}
+
+.Render_wrap img {
+    /* align-items: center; */
+    width: 500px;
+    height: 400px;
+
+}
+
+.Render_wrap .title {
+   font-size: 20px;
+   border: 1px solid red;
+
+}
+
+.Render_wrap .price {
+    font-size: 20px;
+ 
+ }
+
+
+
+@media (max-width: 767px) {
+
+    .itemSection{
+      margin-bottom: 100px;
+    }
+
+
+    .itemSection_wrap >div {
+
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 25px;
+    
+    }
+
+    /* RenderBest, RenderNew */
+
+    .Render_wrap {
+    
+     
+    
+        width: 200px;
+        height: 300px;
+        padding: 20px;
+        
+        
+    }
+
+    .Render_wrap img {
+
+        width: 200px;
+        height: 200px;
+    
+    }
+  }
+
+
+
+

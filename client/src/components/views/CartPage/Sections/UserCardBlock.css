@@ -19,7 +19,7 @@ padding-top: 50px;
 
 .renderImage img{
 
-    border: 3px solid #f74c25;
+    border: 3px solid #000000;
     border-radius:3px;
     width: 300px;
     height: 300px;
@@ -57,9 +57,9 @@ padding-top: 50px;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    border: 2px solid #f74c25;
+    border: 2px solid #000000;
     background-color: #ffffff;
-    color: #f74c25;
+    color: #000000;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -67,9 +67,9 @@ padding-top: 50px;
 .renderInfo .remove button{
     cursor: pointer;
     border-radius: 25%;
-    border: 2px solid #f74c25;
+    border: 2px solid #000000;
     background-color: #ffffff;
-    color: #f74c25;
+    color: #000000;
     margin-left: 20px;
     margin-right: 10px;
     
@@ -79,8 +79,8 @@ padding-top: 50px;
 .renderInfo .remove button:HOVER{
     cursor: pointer;
     border-radius: 25%;
-    border: 2px solid #f74c25;
-    background-color: #f74c25;
+    border: 2px solid #000000;
+    background-color: #000000;
     color: #ffffff;
 
 
@@ -130,9 +130,9 @@ padding-top: 50px;
 
         width: 20px;
         height: 20px;
-        border: 2px solid #f74c25;
+        border: 2px solid #000000;
         background-color: #ffffff;
-        color: #f74c25;
+        color: #000000;
         margin-left: 10px;
         margin-right: 10px;
         
@@ -145,9 +145,9 @@ padding-top: 50px;
         width: 60px;
         font-size: 10px;
         border-radius: 25%;
-        border: 2px solid #f74c25;
+        border: 2px solid #000000;
         background-color: #ffffff;
-        color: #f74c25;
+        color: #000000;
         margin-left: 15px;
     
     

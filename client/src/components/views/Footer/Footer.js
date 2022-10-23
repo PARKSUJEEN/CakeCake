@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div
       style={{
-        backgroundColor: "#f74c25",
+        backgroundColor: "#000000",
         height: "80px",
         display: "flex",
         flexDirection: "column",

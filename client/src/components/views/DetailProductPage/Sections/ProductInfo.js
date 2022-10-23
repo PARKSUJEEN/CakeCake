@@ -30,8 +30,8 @@ function ProductInfo(props) {
           style={{
             width: "300px",
             backgroundColor: "#ffffff",
-            border: "1px solid #f74c25",
-            color: "#f74c25",
+            border: "1px solid #000000",
+            color: "#000000",
           }}
           size="large"
           shape="round"
@@ -46,21 +46,21 @@ function ProductInfo(props) {
 }
 
 const Title = styled.p`
-  color: #f74c25;
+  color: #000000;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   font-size: 30px;
   text-decoration: underline;
 `;
 const Price = styled.p`
   font-family: "Spoqa Han Sans Neo", "sans-serif";
-  color: #f74c25;
+  color: #000000;
   font-size: 25px;
   margin-top: -30px;
 `;
 
 const Description = styled.p`
   font-family: "Spoqa Han Sans Neo", "sans-serif";
-  color: #f74c25;
+  color: #000000;
   font-size: 20px;
   white-space: pre;
 `;

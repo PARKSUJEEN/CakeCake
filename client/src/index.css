@@ -1,4 +1,6 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 body {
   margin: 0;
@@ -33,12 +35,12 @@ body {
 }
 
 input.error {
-  border-color: #f74c25 ;
+  border-color: #ffffff ;
 }
 
 
 .input-feedback {
-  color: #f74c25 ;
+  color: #ffffff ;
   height: 5px;
   margin-top: -12px;
 }

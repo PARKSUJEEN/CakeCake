@@ -51,12 +51,12 @@ function NavBar() {
 }
 
 const SideBar = styled(Drawer)`
-  color: #f74c25;
+  color: #000000;
   .ant-drawer-content {
-    background-color: #f74c25;
+    background-color: #000000;
   }
   .ant-drawer-body {
-    background-color: #f74c25;
+    background-color: #000000;
   }
 `;
 

@@ -30,12 +30,14 @@ function App() {
             path="/product/upload"
             component={Auth(UploadProductPage, true)}
           />
+
           <Route
             exact
             path="/product/:productId"
             component={Auth(DetailProductPage, null)}
           />
           <Route exact path="/user/cart" component={Auth(CartPage, true)} />
+          <Route exact path="/user/cart" component={Auth(HistoryPage, true)} />
           <Route exact path="/user/cart" component={Auth(HistoryPage, true)} />
         </Switch>
       </div>

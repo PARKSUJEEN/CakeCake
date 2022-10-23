@@ -79,7 +79,7 @@ function CartPage(props) {
       <div className="CartPage_wrap">
         <h1>Shopping Cart</h1>
 
-        <div>
+        <div style={{ transform: "none !important" }}>
           <UserCardBlock
             products={props.user.cartDetail}
             removeItem={removeFromCart}

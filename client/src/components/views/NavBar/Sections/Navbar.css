@@ -4,7 +4,7 @@
 .menu {
   
   padding: 0 20px;
-  border: 3px solid #f74c25;
+  border: 3px solid #000000;
   border-radius: 4em;
   /* border-bottom: solid 1px #e8e8e8; */
   overflow: auto;
@@ -23,7 +23,7 @@
   display: inline-block;
   font-size: 20px;
   padding: 19px 20px;
-  color: #f74c25;
+  color: #000000;
 }
 
 .menu__logo a:HOVER {
@@ -38,22 +38,22 @@
 
 .menu__container .ant-menu-submenu-title {
   padding: 10px 20px;
-  color: #f74c25;
+  color: #000000;
 }
 
 /* .menu__container .ant-menu-submenu-title:HOVER {
 
-  color: #f74c25;
+  color: #000000;
   font-family: 'Playfair Display', serif;
 
-  border-bottom: 1px solid #f74c25;
+  border-bottom: 1px solid #000000;
   
 } */
 
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
   padding: 10px 15px;
-  color: #f74c25;
+  color: #000000;
 
 }
 
@@ -84,14 +84,14 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #f74c25;
+  background: #000000;
   display: none !important; /* use of important to overwrite ant-btn */
 
 }
 .menu__mobile-button:HOVER{
  
   background: #ffffff;
-  border:3px solid #f74c25;
+  border:3px solid #000000;
 
 }
 
