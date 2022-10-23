@@ -1,4 +1,4 @@
-{
+{ 
   "name": "react-boiler-plate",
   "version": "1.0.0",
   "description": "react boiler plate",
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
+    "gh-pages": "^4.0.0",
     "less": "^4.1.3",
     "nodemon": "^1.19.1"
   }

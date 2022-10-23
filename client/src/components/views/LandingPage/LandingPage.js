@@ -9,8 +9,7 @@ import { cakes, price } from "./Sections/Datas";
 import RadioBox from "./Sections/RadioBox";
 import SearchFeature from "./Sections/SearchFeature";
 import styled from "styled-components";
-import Slider from "react-slick";
-import Fade from "react-reveal/Fade";
+
 import "./LandingPage.css";
 import RenderBest from "./Sections/RenderBest";
 import RenderNew from "./Sections/RenderNew";
@@ -204,7 +203,6 @@ function LandingPage() {
       <div className="itemSection">
         <div className="itemSection_wrap">
           <div>Staples</div>
-
           <div
             onClick={() => {
               setToggle(false);
@@ -231,6 +229,14 @@ function LandingPage() {
               <RenderNew product={AllProducts} />
             </>
           )}
+        </div>
+      </div>
+      <div class="flow-container">
+        <div class="flow-text">
+          <div class="flow-wrap">Text that flows from right to left. </div>
+          <div class="flow-wrap">Text that flows from right to left. </div>
+          <div class="flow-wrap">Text that flows from right to left. </div>
+          <div class="flow-wrap">Text that flows from right to left. </div>
         </div>
       </div>
 
@@ -266,6 +272,7 @@ function LandingPage() {
 
         {/* { Cards } */}
       </Row>
+
       <Row gutter={[16, 16]} justify="start" align="top">
         {renderCards}
       </Row>

@@ -4,12 +4,16 @@
 /* LandingPage */
 
 .itemSection {
-    
+ width: 100%;
+ 
 }
 
 .itemSection_wrap {
+    font-family: 'Playfair Display', serif;
+    color: #000;
     display: flex;
     justify-content: center;
+    gap:1em;
 
 }
 
@@ -23,67 +27,65 @@
 }
 
 .LandingPage_render {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
+ 
 }
 
 
 /* RenderBest, RenderNew */
+
 .Render {
-    display: flex;
-    justify-content: center;
-    
    
 }
 
 .Render_wrap {
-    
-    
 
-    width: 500px;
-    height: 500px;
     padding: 20px;
-    
-    
-}
-.Render_wrap >div{
-    
-    border: 1px solid orange;
-    width: 100%;
-   
-    
+
 }
 
+.Render_wrap >div{
+    margin-left:50px;
+
+}
 .Render_wrap img {
-    /* align-items: center; */
-    width: 500px;
-    height: 400px;
+
+    width: 300px;
+    height: 300px;
+
 
 }
 
 .Render_wrap .title {
-   font-size: 20px;
-   border: 1px solid red;
-
-}
-
-.Render_wrap .price {
     font-size: 20px;
  
+ 
  }
+ 
+ .Render_wrap .price {
+ 
+     font-size: 20px;
+  
+  }
 
 
 
 @media (max-width: 767px) {
 
     .itemSection{
-      margin-bottom: 100px;
+    
+      flex-wrap: wrap;
+    }
+
+    .itemSection{
+        
     }
 
 
     .itemSection_wrap >div {
-
+        display: flex;
         margin-left: 10px;
         margin-right: 10px;
         font-size: 25px;
@@ -92,13 +94,19 @@
 
     /* RenderBest, RenderNew */
 
-    .Render_wrap {
+    .Render_wrap >div{
+        margin-left:10px;
+    
+    }
+
+    /* .Render_wrap {
     
      
     
         width: 200px;
         height: 300px;
         padding: 20px;
+        
         
         
     }
@@ -109,8 +117,56 @@
         height: 200px;
     
     }
+
+    .Render_wrap .title {
+        font-size: 12px;
+    }
+    .Render_wrap .price {
+        font-size: 12px;
+    } */
   }
 
 
 
 
+/* 흐르는 text css */
+
+.flow-container {
+    margin-bottom: 20px;
+}
+
+.flow-text {
+    display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s;
+    font-size: 5rem;
+    font-weight:bold;
+    color: #000;
+    font-family: 'Playfair Display', serif;
+
+}
+.flow-text:hover {
+  
+  color: #9D9993;
+}
+.flow-text:hover .flow-wrap {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.flow-wrap {
+  animation: textLoop 10s linear infinite;
+  padding-right: 1.4881vw;
+}
+
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
