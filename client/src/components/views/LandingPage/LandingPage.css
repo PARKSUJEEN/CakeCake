@@ -5,6 +5,7 @@
 
 .itemSection {
  width: 100%;
+ margin-top: -20px;
  
 }
 
@@ -47,7 +48,7 @@
 }
 
 .Render_wrap >div{
-    margin-left:50px;
+   
 
 }
 .Render_wrap img {

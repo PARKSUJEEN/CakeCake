@@ -7,7 +7,7 @@ const settings = {
   arrows: true,
   infinite: false,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   responsive: [
     // 반응형 웹 구현 옵션
