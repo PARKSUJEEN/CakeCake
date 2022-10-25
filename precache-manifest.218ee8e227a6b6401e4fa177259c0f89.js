@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "de05a2d370780daeca2cc1fbab548107",
+    "revision": "b2f43d3c05dd22182fb4a735ffa16303",
     "url": "/CakeCake/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CakeCake/static/css/2.51250215.chunk.css"
   },
   {
-    "revision": "c9f8fc13f97a4f71bca8",
+    "revision": "c858d29a302990e28b9d",
     "url": "/CakeCake/static/css/main.71fe4081.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CakeCake/static/js/2.fb715ec3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c9f8fc13f97a4f71bca8",
-    "url": "/CakeCake/static/js/main.c03974b9.chunk.js"
+    "revision": "c858d29a302990e28b9d",
+    "url": "/CakeCake/static/js/main.5d3de4f1.chunk.js"
   },
   {
     "revision": "232d4747890f45a747a0",
