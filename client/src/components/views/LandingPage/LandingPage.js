@@ -231,13 +231,25 @@ function LandingPage() {
       </div>
       <div className="flow-container">
         <div className="flow-text">
-          <div className="flow-wrap">Text that flows from right to left. </div>
-          <div className="flow-wrap">Text that flows from right to left. </div>
-          <div className="flow-wrap">Text that flows from right to left. </div>
-          <div className="flow-wrap">Text that flows from right to left. </div>
+          {/* {cakes.map((it) => (
+            <div className="flow-wrap">{it.name}</div>
+          ))} */}
+          <div className="flow-wrap">Sugar </div>
+          <div className="flow-wrap">Chocolate</div>
+          <div className="flow-wrap"> Butter</div>
+          <div className="flow-wrap">Sugar Butter </div>
         </div>
       </div>
-
+      <div class="animated-title">
+        <div class="track">
+          <div class="content">
+            &nbsp;moho design template glad&nbsp;moho design template
+            glad&nbsp;moho design template glad&nbsp;moho design template
+            glad&nbsp;moho design template glad&nbsp;moho design template glad
+          </div>
+          <div class="content">Butter</div>
+        </div>
+      </div>
       <Row gutter={[16, 16]}>
         <Col lg={12} xs={24}>
           {/* { CheckBox } */}
@@ -270,7 +282,6 @@ function LandingPage() {
 
         {/* { Cards } */}
       </Row>
-
       <Row gutter={[16, 16]} justify="start" align="top">
         {renderCards}
       </Row>
