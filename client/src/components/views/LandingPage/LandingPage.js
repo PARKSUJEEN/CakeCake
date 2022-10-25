@@ -229,12 +229,12 @@ function LandingPage() {
           )}
         </div>
       </div>
-      <div class="flow-container">
-        <div class="flow-text">
-          <div class="flow-wrap">Text that flows from right to left. </div>
-          <div class="flow-wrap">Text that flows from right to left. </div>
-          <div class="flow-wrap">Text that flows from right to left. </div>
-          <div class="flow-wrap">Text that flows from right to left. </div>
+      <div className="flow-container">
+        <div className="flow-text">
+          <div className="flow-wrap">Text that flows from right to left. </div>
+          <div className="flow-wrap">Text that flows from right to left. </div>
+          <div className="flow-wrap">Text that flows from right to left. </div>
+          <div className="flow-wrap">Text that flows from right to left. </div>
         </div>
       </div>
 
