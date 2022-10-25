@@ -229,25 +229,13 @@ function LandingPage() {
           )}
         </div>
       </div>
-      <div className="flow-container">
-        <div className="flow-text">
-          {/* {cakes.map((it) => (
-            <div className="flow-wrap">{it.name}</div>
-          ))} */}
-          <div className="flow-wrap">Sugar </div>
-          <div className="flow-wrap">Chocolate</div>
-          <div className="flow-wrap"> Butter</div>
-          <div className="flow-wrap">Sugar Butter </div>
-        </div>
-      </div>
+
       <div class="animated-title">
         <div class="track">
           <div class="content">
-            &nbsp;moho design template glad&nbsp;moho design template
-            glad&nbsp;moho design template glad&nbsp;moho design template
-            glad&nbsp;moho design template glad&nbsp;moho design template glad
+            &nbsp;Choco&nbsp;Sugar&nbsp;Butter&nbsp;Salt
+            &nbsp;Cream&nbsp;Cheese&nbsp;Moose&nbsp;StrawBerry&nbsp;Chiffon
           </div>
-          <div class="content">Butter</div>
         </div>
       </div>
       <Row gutter={[16, 16]}>

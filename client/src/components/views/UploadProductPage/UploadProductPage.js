@@ -96,9 +96,9 @@ function UploadProductPage(props) {
         <Input type="number" onChange={priceChangeHandler} value={Price} />
         <br />
         <br />
-        <select onChange={cakeChangeHandler} value={3}>
+        <select onChange={cakeChangeHandler} value={Cake}>
           {Cakes.map((item) => (
-            <option key={item.key} value={item.key}>
+            <option key={item.key} value={item.value}>
               {item.value}
             </option>
           ))}

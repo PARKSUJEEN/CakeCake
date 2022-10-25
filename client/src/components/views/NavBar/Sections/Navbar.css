@@ -32,13 +32,16 @@
 
 .menu__container .ant-menu-item {
   padding: 0px 5px;
-  
+  background-color: #f7f6f2;
+
 
 }
 
 .menu__container .ant-menu-submenu-title {
   padding: 10px 20px;
   color: #000000;
+  background-color: #f7f6f2;
+
 }
 
 /* .menu__container .ant-menu-submenu-title:HOVER {

@@ -72,7 +72,10 @@
   }
 
 
+  /* Slick Slider */
 
+
+/* 반응형 767px 이하 */
 @media (max-width: 767px) {
 
     .itemSection{
@@ -100,6 +103,13 @@
     
     }
 
+    .itemSection {
+    
+    }
+
+    .animated-title {
+     margin-top:30px;
+    }
     /* .Render_wrap {
     
      
@@ -132,48 +142,24 @@
 
 /* 흐르는 text css */
 
-.flow-container {
-    margin-bottom: 20px;
-}
-
-.flow-text {
-    display: flex;
-    flex: 0 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    transition: 0.3s;
-    font-size: 5rem;
-    font-weight:bold;
-    color: #000;
-    font-family: 'Playfair Display', serif;
-
-}
-.flow-text:hover {
-  
-  color: #9D9993;
-}
-.flow-text:hover .flow-wrap {
-  animation-play-state: paused;
-  cursor: pointer;
-}
-.flow-wrap {
-  animation: textLoop 10s linear infinite;
-  padding-right: 1.4881vw;
-}
-
-@keyframes textLoop {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
 
 
-.animated-title {font-size:60px; font-family:'Raleway',Sans-serif; font-weight:300; position: relative; width: 100%;max-width:100%; height: auto; padding:100px 0; overflow-x: hidden; overflow-y: hidden; }
+
+.animated-title {
+  color:#000;
+  font-size:70px; 
+  font-family: 'Playfair Display', serif;
+  font-weight: 500; 
+  position: relative; 
+  width: 100%;
+  max-width:100%; 
+  height: auto; 
+  padding:100px 0;
+  margin-top:-100px;
+  margin-bottom: 20px;
+  overflow-x: 
+  hidden; 
+  overflow-y: hidden; }
 .animated-title .track {position: absolute; white-space: nowrap;will-change: transform;animation: marquee 60s linear infinite; }
 @keyframes marquee {
   from { transform: translateX(0); }
