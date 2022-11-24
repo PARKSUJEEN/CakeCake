@@ -9,12 +9,12 @@ function ProductImage(props) {
     if (props.detail.images && props.detail.images.length > 0) {
       let images = [];
 
-      props.detail.images.map((item) => {
+      props.detail.images.map((item) =>
         images.push({
           original: `http://localhost:5000/${item}`, // 원래는 다이나믹하게 처리해주어야함.
           thumbnail: `http://localhost:5000/${item}`,
-        });
-      });
+        })
+      );
 
       setImages(images);
     }

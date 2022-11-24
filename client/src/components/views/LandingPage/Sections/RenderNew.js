@@ -4,7 +4,7 @@ import "../LandingPage.css";
 
 const settings = {
   arrows: true,
-  infinite: true,
+  infinite: false,
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -38,7 +38,6 @@ function RenderNew(props) {
 
   useEffect(() => {
     setNew(props.product);
-    console.log("renderNew실행됨");
   }, [props.product]);
 
   const newview = () => {

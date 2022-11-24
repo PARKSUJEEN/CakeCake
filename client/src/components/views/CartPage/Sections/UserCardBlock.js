@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./UserCardBlock.css";
 
 function UserCardBlock(props) {
@@ -16,10 +16,9 @@ function UserCardBlock(props) {
         <div className="renderImage">
           <img alt="product" src={renderCartImage(product.images)} />
         </div>
-        {/* <button onClick={downdown}>{test}</button> */}
         <div className="renderInfo">
           <div className="title"> {product.title}</div>
-          <div className="price"> {product.price}</div>
+          <div className="price"> $ {product.price}</div>
           <div className="quantity">
             <button
               onClick={() => {

@@ -1,41 +1,45 @@
-.CartPage{
+.CartPage {
 
     width: 100%;
-
     display: flex;
     justify-content: center;
 }
 
-.CartPage_wrap h1{
 
-   margin-left: 20px;
-   color: #000000;
-   margin-top: 20px;
+.CartPage_wrap h1 {
 
-   
+    margin-left: 20px;
+    color: #000000;
+    margin-top: 20px;
 
 }
 
-.CartPage_wrap{
-    
-    
+
+.CartPage_wrap {
+    }
+
+.CartPage_wrap .done {
+    display: flex;
+    justify-content: center;
 }
+
 
 .totalAmount {
-    
+
     font-size: 30px;
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     color: #000000;
     text-align: center;
     display: flex;
     justify-content: center;
-    
-    
+
 }
 
-.totalAmount .totalAmount_wrap{
+
+.totalAmount .totalAmount_wrap {
     padding: 20px;
 }
+
 
 .totalAmount >div{
    

@@ -2,47 +2,50 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&family=Playfair+Display:ital,wght@0,700;1,500&display=swap');
 .menu {
-  
-  padding: 0 20px;
-  border: 3px solid #000000;
-  border-radius: 4em;
-  /* border-bottom: solid 1px #e8e8e8; */
-  overflow: auto;
-  box-shadow: 0 0 30px #f3f1f1;
-  background-color: #f7f6f2;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+
+    padding: 0 20px;
+    border: 3px solid #000000;
+    border-radius: 4em;
+    /* border-bottom: solid 1px #e8e8e8; */
+    overflow: auto;
+    box-shadow: 0 0 30px #f3f1f1;
+    background-color: #f7f6f2;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
+
 
 .menu__logo {
-  width: 150px;
-  float: left;
+    width: 150px;
+    float: left;
 
 }
 
+
 .menu__logo a {
-  display: inline-block;
-  font-size: 20px;
-  padding: 19px 20px;
-  color: #000000;
+    display: inline-block;
+    font-size: 20px;
+    padding: 19px 20px;
+    color: #000000;
 }
 
 .menu__logo a:HOVER {
-  font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 .menu__container .ant-menu-item {
-  padding: 0px 5px;
-  background-color: #f7f6f2;
-
+    padding: 0 5px;
+    background-color: #f7f6f2;
 
 }
+
 
 .menu__container .ant-menu-submenu-title {
-  padding: 10px 20px;
-  color: #000000;
-  background-color: #f7f6f2;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: #f7f6f2;
 
 }
+
 
 /* .menu__container .ant-menu-submenu-title:HOVER {
 
@@ -55,10 +58,11 @@
 
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
-  padding: 10px 15px;
-  color: #000000;
+    padding: 10px 15px;
+    color: #000000;
 
 }
+
 
 
 
@@ -78,66 +82,69 @@
 }
 
 .menu__mobile-button {
-  border: none;
-  cursor: pointer;
-  float: right;
- 
-  padding: 6px;
-  margin-top: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #000000;
-  display: none !important; /* use of important to overwrite ant-btn */
+    border: none;
+    cursor: pointer;
+    float: right;
+
+    padding: 6px;
+    margin-top: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000000;
+    display: none !important;
+    /* use of important to overwrite ant-btn */
 
 }
-.menu__mobile-button:HOVER{
- 
-  background: #ffffff;
-  border:3px solid #000000;
+.menu__mobile-button:HOVER {
+
+    background: #ffffff;
+    border: 3px solid #000000;
 
 }
+
 
 
 .menu_drawer .ant-drawer-body {
-  padding: 0 !important;
-  
+    padding: 0 !important;
+
 }
+
 
 
 
 
 /* align header of Drawer with header of page */
 .menu_drawer .ant-drawer-header {
-  padding: 14px 24px !important;
+    padding: 14px 24px !important;
 
 }
 
 @media (max-width: 767px) {
-  .menu__mobile-button {
-    display: inline-block !important;
-  }
+    .menu__mobile-button {
+        display: inline-block !important;
+    }
 
-  .menu_left,
-  .menu_right {
-    display: none;
-  }
+    .menu_left,
+    .menu_right {
+        display: none;
+    }
 
-  .menu__logo a {
-    margin-left: -20px;
-  }
+    .menu__logo a {
+        margin-left: -20px;
+    }
 
-  .menu__container .ant-menu-item,
-  .menu__container .ant-menu-submenu-title {
-    padding: 1px 20px;
-  }
+    .menu__container .ant-menu-item,
+    .menu__container .ant-menu-submenu-title {
+        padding: 1px 20px;
+    }
 
-  .menu__logo a {
-    padding: 10px 20px;
+    .menu__logo a {
+        padding: 10px 20px;
 
-  }
+    }
 
-  .shopping-cart a{
-    font-size: 10px;
-  }
+    .shopping-cart a {
+        font-size: 10px;
+    }
 }

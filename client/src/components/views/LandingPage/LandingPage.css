@@ -4,21 +4,23 @@
 /* LandingPage */
 
 .itemSection {
- width: 100%;
- margin-top: -20px;
- 
+    width: 100%;
+    margin-top: -20px;
+
 }
+
 
 .itemSection_wrap {
     font-family: 'Playfair Display', serif;
     color: #000;
     display: flex;
     justify-content: center;
-    gap:1em;
+    gap: 1em;
 
 }
 
-.itemSection_wrap >div {
+
+.itemSection_wrap>div {
     display: flex;
     margin-left: 20px;
     margin-right: 20px;
@@ -47,6 +49,7 @@
 
 }
 
+
 .Render_wrap >div{
    
 
@@ -61,15 +64,17 @@
 
 .Render_wrap .title {
     font-size: 20px;
+    color: #000;
+
+}
+
  
- 
- }
- 
- .Render_wrap .price {
- 
-     font-size: 20px;
-  
-  }
+.Render_wrap .price {
+
+    font-size: 20px;
+
+}
+
 
 
   /* Slick Slider */
@@ -78,64 +83,36 @@
 /* 반응형 767px 이하 */
 @media (max-width: 767px) {
 
-    .itemSection{
-    
-      flex-wrap: wrap;
+    .itemSection {
+
+        flex-wrap: wrap;
     }
 
-    .itemSection{
-        
-    }
+    .itemSection {}
 
-
-    .itemSection_wrap >div {
+    .itemSection_wrap > div {
         display: flex;
         margin-left: 10px;
         margin-right: 10px;
         font-size: 25px;
-    
+
     }
 
     /* RenderBest, RenderNew */
 
-    .Render_wrap >div{
-        margin-left:10px;
-    
+    .Render_wrap > div {
+        margin-left: 10px;
+
     }
 
-    .itemSection {
-    
-    }
+    .itemSection {}
 
     .animated-title {
-     margin-top:30px;
-    }
-    /* .Render_wrap {
-    
-     
-    
-        width: 200px;
-        height: 300px;
-        padding: 20px;
-        
-        
-        
+        margin-top: 30px;
     }
 
-    .Render_wrap img {
+}
 
-        width: 200px;
-        height: 200px;
-    
-    }
-
-    .Render_wrap .title {
-        font-size: 12px;
-    }
-    .Render_wrap .price {
-        font-size: 12px;
-    } */
-  }
 
 
 
@@ -146,25 +123,37 @@
 
 
 .animated-title {
-  color:#000;
-  font-size:70px; 
-  font-family: 'Playfair Display', serif;
-  font-weight: 500; 
-  position: relative; 
-  width: 100%;
-  max-width:100%; 
-  height: auto; 
-  padding:100px 0;
-  margin-top:-100px;
-  margin-bottom: 20px;
-  overflow-x: 
-  hidden; 
-  overflow-y: hidden; }
-.animated-title .track {position: absolute; white-space: nowrap;will-change: transform;animation: marquee 60s linear infinite; }
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+    color: #000;
+    font-size: 70px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 100px 0;
+    margin-top: -100px;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
-@media (hover: hover) and (min-width: 700px){
-.animated-title .content {-webkit-transform: translateY(calc(100% - 8rem)); transform: translateY(calc(100% - 8rem));}
+.animated-title .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 60s linear infinite;
+}
+@keyframes marquee {
+    from {
+        transform: translateX(0);
     }
+    to {
+        transform: translateX(-50%);
+    }
+}
+@media (hover: hover) and (min-width: 700px) {
+    .animated-title .content {
+        -webkit-transform: translateY(calc(100% - 8rem));
+        transform: translateY(calc(100% - 8rem));
+    }
+}

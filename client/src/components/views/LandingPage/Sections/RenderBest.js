@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "../LandingPage.css";
 
 const settings = {
-  dots: true,
+  dots: false,
   arrows: true,
   infinite: false,
   speed: 500,
@@ -33,11 +33,10 @@ function RenderBest(props) {
 
   useEffect(() => {
     setBestseller(props.product);
-    console.log("renderBest실행됨");
   }, [props.product]);
 
   const bestview = () => {
-    const compare = (a, b) => a.sold - b.sold;
+    const compare = (a, b) => b.sold - a.sold;
     const sortedList = Bestseller.sort(compare);
     return sortedList;
   };

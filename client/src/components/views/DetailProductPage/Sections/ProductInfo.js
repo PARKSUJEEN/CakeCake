@@ -18,7 +18,7 @@ function ProductInfo(props) {
   return (
     <div>
       <Title>{props.detail.title}</Title>
-      <Price>{props.detail.price}</Price>
+      <Price>${props.detail.price}</Price>
       <Description> {props.detail.description}</Description>
 
       <br />

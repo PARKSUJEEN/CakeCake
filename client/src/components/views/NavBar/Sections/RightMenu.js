@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import { Menu, Icon, Badge } from "antd";
+import React  from "react";
+import { Menu } from "antd";
 import axios from "axios";
 import { USER_SERVER } from "../../../Config";
 import { withRouter } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 import "./Navbar.css";
 
 function RightMenu(props) {
@@ -40,7 +41,6 @@ function RightMenu(props) {
         <Menu.Item key="upload">
           <a href="/product/upload">Upload</a>
         </Menu.Item>
-
         <Menu.Item key="cart">
           <a href="/user/cart">Cart</a>
         </Menu.Item>

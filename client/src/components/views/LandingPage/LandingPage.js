@@ -1,7 +1,7 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import axios from "axios";
-import { Icon, Col, Card, Row, Carousel } from "antd";
+import { Col, Card, Row } from "antd";
 import Meta from "antd/lib/card/Meta";
 import ImageSlider from "../../utils/ImageSlider";
 import CheckBox from "./Sections/CheckBox";
@@ -48,8 +48,6 @@ function LandingPage() {
 
   const getProducts = (body) => {
     axios.post("/api/product/products", body).then((response) => {
-      console.log(response.data);
-
       if (response.data.success) {
         if (body.loadMore) {
           setProducts([...Products, ...response.data.productInfo]);
@@ -66,8 +64,6 @@ function LandingPage() {
 
   const getAllproducts = () => {
     axios.post("/api/product/allproducts").then((response) => {
-      console.log("getAllProducts", response.data);
-
       if (response.data.success) {
         setAllProducts(response.data.productInfo);
       } else {
@@ -85,12 +81,6 @@ function LandingPage() {
               <ImageSlider images={product.images} />
             </a>
           }
-          // cover={
-          //   <img
-          //     syle={{ width: "100%", maxHeight: "150px" }}
-          //     src={`http://localhost:5000/${product.images[0]}`}
-          //   />
-          // }
         >
           <Meta title={product.title} description={`$${product.price}`} />
         </Card>
@@ -170,33 +160,6 @@ function LandingPage() {
   return (
     <div style={{ width: "75%", margin: "3rem auto" }}>
       <div style={{ textAlign: "center" }}></div>
-      {/* 
-      <div>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-            <img
-              style={{ minWidth: "500px", width: "300px", height: "500px" }}
-              src="img/1657868791094_cake4.jpg"
-            />
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div> */}
       {/* { Filter } */}
       <div className="itemSection">
         <div className="itemSection_wrap">
@@ -204,7 +167,6 @@ function LandingPage() {
           <div
             onClick={() => {
               setToggle(false);
-              console.log("landingpage에서 newCakes클릭");
             }}
           >
             New Cakes
@@ -230,9 +192,9 @@ function LandingPage() {
         </div>
       </div>
 
-      <div class="animated-title">
-        <div class="track">
-          <div class="content">
+      <div className="animated-title">
+        <div className="track">
+          <div className="content">
             &nbsp;Choco&nbsp;Sugar&nbsp;Butter&nbsp;Salt
             &nbsp;Cream&nbsp;Cheese&nbsp;Moose&nbsp;StrawBerry&nbsp;Chiffon
           </div>

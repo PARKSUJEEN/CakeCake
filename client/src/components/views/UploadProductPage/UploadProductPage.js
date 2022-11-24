@@ -7,7 +7,7 @@ const { TextArea } = Input;
 
 const Cakes = [
   { key: 1, value: "ButterCake" },
-  { key: 2, value: "RollCake" },
+  { key: 2, value: "WhippingCreamCake" },
   { key: 3, value: "CheeseCake" },
   { key: 4, value: "SpongeCake" },
   { key: 5, value: "MooseCake" },
@@ -92,13 +92,13 @@ function UploadProductPage(props) {
         <TextArea onChange={descriptionChangeHandler} value={Description} />
         <br />
         <br />
-        <label>가격(won)</label>
+        <label>가격($)</label>
         <Input type="number" onChange={priceChangeHandler} value={Price} />
         <br />
         <br />
         <select onChange={cakeChangeHandler} value={Cake}>
           {Cakes.map((item) => (
-            <option key={item.key} value={item.value}>
+            <option key={item.key} value={item.key}>
               {item.value}
             </option>
           ))}

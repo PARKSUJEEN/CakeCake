@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Collapse, Radio, Slider } from "antd";
+import { Collapse, Radio } from "antd";
 
 const { Panel } = Collapse;
 
