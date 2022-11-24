@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
+<<<<<<< HEAD
 const bcrypt = require("bcrypt");
+=======
+const bcrypt = require("bcryptjs");
+>>>>>>> ac3c1f11ae0003171736c436265d4506e2c7ae4b
 const saltRounds = 10;
 const jwt = require("jsonwebtoken");
 const moment = require("moment");
